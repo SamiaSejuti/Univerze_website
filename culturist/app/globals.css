@@ -1,0 +1,304 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: 'Porcelain';
+  src: url('/fonts/Porcelain.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Revalia-Regular';
+  src: url('/fonts/Revalia-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('/fonts/LeagueSpartan.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('/fonts/Ubuntu.ttf') format('truetype');
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #ffffff;
+  /*background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));*/
+}
+
+/* Base style */
+main {
+  /* @apply max-w-5xl my-12 mx-auto px-8 */
+  @apply mx-auto my-auto
+}
+
+/* Header/Footer Style */
+
+/* Card Style */
+.card {
+  @apply 
+    bg-white
+    text-black  
+    py-3 px-3 my-3 mx-3;
+    /* relative 
+    overflow-hidden; */
+}
+
+/* Search Bar */
+.search_bar {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: 100px;
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+.search_bar.input {
+  background: '#eee4c9';
+}
+
+/* Trivia */
+
+/* Events */
+.event-detail__container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+
+.stepper_heading {
+  font-size: 32px;
+  font-family: 'LeagueSpartan', sans-serif;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  background: linear-gradient(to right, #ef5c72, #e9bc38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.landing_head {
+  font-size: 40px;
+  font-family: 'LeagueSpartan', sans-serif;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  background: linear-gradient(to right, #ef5c72, #e9bc38);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.stepper_subheading1 {
+  font-size: 32px;
+  font-family: 'LeagueSpartan', sans-serif;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  color: #D6AD60;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px black;}
+
+
+
+
+
+
+.stepper_subhead{
+  font-size: 28px;
+  font-family: 'LeagueSpartan', sans-serif;
+  margin: 20px 0 10px 0;
+  color: #db9b3c;
+  font-style: bold;
+
+}
+
+.stepper_subhead_accordion{
+  font-size: 28px;
+  font-family: 'LeagueSpartan', sans-serif;
+  margin: 20px 0 10px 0;
+  color: #0a0a0a;
+  font-style: bold;
+
+}
+
+.textBody{
+  font-size: 20px;
+}
+
+.textBodyBold{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chat-bubble {
+  font-size: 20px;
+  max-width: 600px; 
+  padding: 10px; 
+  word-wrap: break-word;
+  background-color: #e5cbac;
+  color: black;
+}
+
+.nav-item{
+  font-size: 18px;
+  font-family: 'Ubuntu';
+}
+
+
+
+
+
+
+
+/* Plus icon glow effect */
+
+@keyframes anim-glow {
+  0% {
+    box-shadow: 0 0 rgba(97, 239, 97, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px 8px transparent;
+    border-width: 2px;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #61EF61;
+  text-align: center;
+  position: relative;
+  animation: anim-glow 2s ease infinite;
+}
+
+.icon i {
+  border-radius: 50%;
+  border: 2px solid #61EF61;
+  width: 10px;
+  height: 10px;
+  background-color: #61EF61;
+}
+.home-hero {
+  /* display: flex; */
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  background-color: #EBDAC8 !important;
+}
+.uv-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+.uv-title-secondary {
+  font-size: 30px;
+  color: #E2A329;
+  font-weight: bold;
+}
+
+.uv-text {
+  color: black;
+}
+
+.uv-title-resource {
+  color: black;
+  font-size: '8px';
+  font-weight: bold;
+}
+
+.uv-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uv-btn-primary-md {
+  background-color: #E2A329;
+  font-weight: bold;
+  height: 27px;
+  width: 175px;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.uv-btn-primary {
+  background-color: #E2A329;
+  font-weight: bold;
+  height: 27px;
+  width: 125px;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.uv-btn-primary-lg {
+  background-color: #E2A329;
+  font-weight: bold;
+  height: 40px;
+  min-width: 195px;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.uv-btn-tab {
+  background-color: #E2A329;
+  font-weight: bold;
+  height: 50px;
+  color: #ffffff;
+}
+
+.uv-hero-img {
+  border-radius: 16px;
+}
+
+.uv-bg-primary {
+  background-color: #F8F9FB;
+}
+
+.uv-bg-secondary {
+  background-color: #E2A329;
+}
+
+.uv-card-bg {
+  background-color: #EBDAC8;
+}
+
+/* Map */
+.uv-map {
+  width: 100%;
+  height: 100%;
+}
